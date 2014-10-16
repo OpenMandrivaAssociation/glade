@@ -22,6 +22,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	itstool
+BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-3.0)
@@ -71,8 +72,7 @@ GObject Introspection interface description for libgladeui (%{name}).
 %build
 export PYTHON=%__python2
 %configure \
-	--enable-gtk-doc \
-	--disable-scrollkeeper
+	--enable-gtk-doc
 
 %make
 
