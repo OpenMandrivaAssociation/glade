@@ -1,0 +1,22 @@
+--- glade-3.16.1/gladeui/Makefile.am~	2013-12-18 23:00:38.000000000 +0800
++++ glade-3.16.1/gladeui/Makefile.am	2014-02-07 19:27:15.349723042 +0800
+@@ -141,7 +141,7 @@
+ 	$(AM_CFLAGS)
+ 
+ libgladeui_2_la_LDFLAGS = -version-info $(GLADE_CURRENT):$(GLADE_REVISION):$(GLADE_AGE) $(AM_LDFLAGS)
+-libgladeui_2_la_LIBADD = $(GTK_LIBS) $(GTK_MAC_LIBS)
++libgladeui_2_la_LIBADD = $(GTK_LIBS) $(GTK_MAC_LIBS) -lm
+ 
+ libgladeuiincludedir=$(includedir)/libgladeui-2.0/gladeui
+ libgladeuiinclude_HEADERS = \
+--- glade-3.16.1/gladeui/Makefile.in~	2013-12-19 04:53:19.000000000 +0800
++++ glade-3.16.1/gladeui/Makefile.in	2014-02-07 19:27:22.829933099 +0800
+@@ -607,7 +607,7 @@
+ libgladeui_2_la_LDFLAGS = -version-info \
+ 	$(GLADE_CURRENT):$(GLADE_REVISION):$(GLADE_AGE) $(AM_LDFLAGS) \
+ 	$(am__append_3) $(am__append_4)
+-libgladeui_2_la_LIBADD = $(GTK_LIBS) $(GTK_MAC_LIBS)
++libgladeui_2_la_LIBADD = $(GTK_LIBS) $(GTK_MAC_LIBS) -lm
+ libgladeuiincludedir = $(includedir)/libgladeui-2.0/gladeui
+ libgladeuiinclude_HEADERS = \
+ 	glade.h \

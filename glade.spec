@@ -1,7 +1,8 @@
 %define url_ver		%(echo %{version}|cut -d. -f1,2)
+%define _disable_ld_no_undefined 1
 
 %define api	2
-%define major	0
+%define major	6
 %define gimajor	2.0
 %define libname	%mklibname gladeui %{api} %{major}
 %define devname	%mklibname -d gladeui %{api}
@@ -9,12 +10,13 @@
 
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
-Version:	3.12.1
-Release:	5
+Version:	3.18.3
+Release:	1
 License:	GPLv2+
 Url:		http://glade.gnome.org/
 Group:		Development/GNOME and GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
+Patch0:		glade-3.16.1-fix-linkage.patch
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	gtk-doc
@@ -63,12 +65,13 @@ GObject Introspection interface description for libgladeui (%{name}).
 
 %prep
 %setup -q
+%apply_patches
 
 %build
-%configure2_5x \
+export PYTHON=%__python2
+%configure \
 	--enable-gtk-doc \
-	--disable-scrollkeeper \
-	--disable-static
+	--disable-scrollkeeper
 
 %make
 
@@ -93,7 +96,9 @@ desktop-file-install --vendor="" \
 %{_libdir}/%{name}/modules/libgladegtk.so
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/appdata/glade.appdata.xml
 %{_iconsdir}/hicolor/*/apps/glade*
+%{_mandir}/man1/*
 
 %files -n %{libname}
 %{_libdir}/libgladeui-%{api}.so.%{major}*
