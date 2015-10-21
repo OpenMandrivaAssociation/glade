@@ -1,5 +1,6 @@
 %define url_ver		%(echo %{version}|cut -d. -f1,2)
 %define _disable_ld_no_undefined 1
+%define _disable_rebuild_configure 1
 
 %define api	2
 %define major	6
@@ -10,8 +11,8 @@
 
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
-Version:	3.18.3
-Release:	4
+Version:	3.19.0
+Release:	1
 License:	GPLv2+
 Url:		http://glade.gnome.org/
 Group:		Development/GNOME and GTK+

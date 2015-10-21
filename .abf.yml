@@ -1,4 +1,5 @@
 removed_sources:
   glade-3.12.1.tar.xz: 37e7f6bc6498ff67af4501bd923c075dc5b9dfcc
-sources:
   glade-3.18.3.tar.xz: 0684b0abc841a6a8f1ae6348eb96e0b4223b6835
+sources:
+  glade-3.19.0.tar.xz: 4cafedd173b64fc3898a39901a7c9c11ed75779c
