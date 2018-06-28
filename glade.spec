@@ -1,29 +1,28 @@
-%define url_ver		%(echo %{version}|cut -d. -f1,2)
+%define url_ver %(echo %{version}|cut -d. -f1,2)
 %define _disable_ld_no_undefined 1
 %define _disable_rebuild_configure 1
 
-%define api	2
-%define major	6
-%define gimajor	2.0
-%define libname	%mklibname gladeui %{api} %{major}
-%define devname	%mklibname -d gladeui %{api}
-%define girname	%mklibname gladeui-gir %{gimajor}
+%define api 2
+%define major 6
+%define gimajor 2.0
+%define libname %mklibname gladeui %{api} %{major}
+%define devname %mklibname -d gladeui %{api}
+%define girname %mklibname gladeui-gir %{gimajor}
 
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
-Version:	3.19.0
+Version:	3.22.1
 Release:	1
 License:	GPLv2+
 Url:		http://glade.gnome.org/
 Group:		Development/GNOME and GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
-Patch0:		glade-3.16.1-fix-linkage.patch
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	itstool
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-3.0)
@@ -71,7 +70,6 @@ GObject Introspection interface description for libgladeui (%{name}).
 %apply_patches
 
 %build
-export PYTHON=%__python2
 %configure \
 	--enable-gtk-doc
 
@@ -115,4 +113,3 @@ desktop-file-install --vendor="" \
 %{_libdir}/pkgconfig/gladeui-2.0.pc
 %{_libdir}/libgladeui-%{api}.so
 %{_datadir}/gir-1.0/Gladeui-%{gimajor}.gir
-
