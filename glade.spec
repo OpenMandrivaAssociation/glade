@@ -67,7 +67,7 @@ GObject Introspection interface description for libgladeui (%{name}).
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure \
