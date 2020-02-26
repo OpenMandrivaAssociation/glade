@@ -11,8 +11,8 @@
 
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
-Version:	3.22.1
-Release:	3
+Version:	3.22.2
+Release:	1
 License:	GPLv2+
 Url:		http://glade.gnome.org/
 Group:		Development/GNOME and GTK+
@@ -73,10 +73,10 @@ GObject Introspection interface description for libgladeui (%{name}).
 %configure \
 	--enable-gtk-doc
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name} --with-gnome
 
