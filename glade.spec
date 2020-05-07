@@ -98,7 +98,7 @@ desktop-file-install --vendor="" \
 %{_libdir}/%{name}/modules/libgladewebkit2gtk.so
 %{_datadir}/%{name}
 %{_datadir}/metainfo//org.gnome.Glade.appdata.xml
-#{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/org.gnome.Glade.desktop
 %{_iconsdir}/hicolor/*/apps/glade*
 %{_datadir}/icons/hicolor/*/apps/org.gnome.Glade*
 %{_mandir}/man1/*
