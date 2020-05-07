@@ -3,7 +3,7 @@
 %define _disable_rebuild_configure 1
 
 %define api 2
-%define major 6
+%define major 12
 %define gimajor 2.0
 %define libname %mklibname gladeui %{api} %{major}
 %define devname %mklibname -d gladeui %{api}
@@ -11,7 +11,7 @@
 
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
-Version:	3.22.2
+Version:	3.36.0
 Release:	1
 License:	GPLv2+
 Url:		http://glade.gnome.org/
@@ -28,6 +28,7 @@ BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(pygobject-3.0)
+BuildRequires:  pkgconfig(webkit2gtk-4.0)
 
 %description
 Glade is a RAD tool to enable quick & easy development of user interfaces
@@ -88,16 +89,18 @@ desktop-file-install --vendor="" \
 	%{buildroot}%{_datadir}/applications/*
 
 %files -f %{name}.lang
-%doc AUTHORS README TODO
+%doc AUTHORS NEWS TODO
 %{_bindir}/%{name}*
 %dir %{_libdir}/%{name}/
 %dir %{_libdir}/%{name}/modules/
 %{_libdir}/%{name}/modules/libgladepython.so
 %{_libdir}/%{name}/modules/libgladegtk.so
+%{_libdir}/%{name}/modules/libgladewebkit2gtk.so
 %{_datadir}/%{name}
-%{_datadir}/metainfo/glade.appdata.xml
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/metainfo//org.gnome.Glade.appdata.xml
+%{_datadir}/applications/org.gnome.Glade.desktop
 %{_iconsdir}/hicolor/*/apps/glade*
+%{_datadir}/icons/hicolor/*/apps/org.gnome.Glade*
 %{_mandir}/man1/*
 
 %files -n %{libname}
