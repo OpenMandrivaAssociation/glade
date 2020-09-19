@@ -98,7 +98,9 @@ desktop-file-install --vendor="" \
 %{_libdir}/%{name}/modules/libgladepython.so
 %{_libdir}/%{name}/modules/libgladegtk.so
 %{_libdir}/%{name}/modules/libgladewebkit2gtk.so
+%{_libdir}/%{name}/modules/libgladegjs.so
 %{_datadir}/%{name}
+%{_datadir}/gettext/its/glade-catalog.*
 %{_datadir}/metainfo//org.gnome.Glade.appdata.xml
 %{_datadir}/applications/org.gnome.Glade.desktop
 %{_iconsdir}/hicolor/*/apps/glade*
