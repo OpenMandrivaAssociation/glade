@@ -18,6 +18,7 @@ Url:		http://glade.gnome.org/
 Group:		Development/GNOME and GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
 
+BuildRequires:  meson
 BuildRequires:	desktop-file-utils
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
@@ -71,13 +72,12 @@ GObject Introspection interface description for libgladeui (%{name}).
 %autopatch -p1
 
 %build
-%configure \
-	--enable-gtk-doc
+%meson
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name} --with-gnome
 
