@@ -112,8 +112,6 @@ desktop-file-install --vendor="" \
 %{_libdir}/girepository-1.0/Gladeui-%{gimajor}.typelib
 
 %files -n %{devname}
-%doc ChangeLog
-%doc %{_datadir}/gtk-doc/html/*
 %{_includedir}/libgladeui-2.0/
 %{_libdir}/pkgconfig/gladeui-2.0.pc
 %{_libdir}/libgladeui-%{api}.so
