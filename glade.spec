@@ -19,10 +19,12 @@ Group:		Development/GNOME and GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:  meson
+BuildRequires:  cmake
 BuildRequires:	desktop-file-utils
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	itstool
+BuildRequires:  pkgconfig(gjs-1.0)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
