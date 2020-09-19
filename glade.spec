@@ -3,7 +3,7 @@
 %define _disable_rebuild_configure 1
 
 %define api 2
-%define major 12
+%define major 13
 %define gimajor 2.0
 %define libname %mklibname gladeui %{api} %{major}
 %define devname %mklibname -d gladeui %{api}
