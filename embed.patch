@@ -1,0 +1,12 @@
+diff -uraN glade-3.38.1/meson.build omv-glade-3.38.1/meson.build
+--- glade-3.38.1/meson.build	2020-10-04 22:41:18.164399000 +0200
++++ omv-glade-3.38.1/meson.build	2020-11-01 17:55:18.244866871 +0100
+@@ -150,7 +150,7 @@
+ pygobject_dep = dependency('pygobject-3.0', version: '>= ' + pygobject_version, required: get_option('python'))
+ have_python = pygobject_dep.found()
+ if have_python
+-  python_dep = dependency('python-3.8-embed', version: '>= 3.8')
++  python_dep = dependency('python-3.8-embed', version: '>= 3.9')
+ 
+   version_array = pygobject_version.split('.')
+   config_h.set('PYGOBJECT_REQUIRED_MAJOR', version_array[0].to_int())
