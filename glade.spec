@@ -11,14 +11,12 @@
 
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
-Version:	3.38.1
-Release:	2
+Version:	3.38.2
+Release:	1
 License:	GPLv2+
 Url:		http://glade.gnome.org/
 Group:		Development/GNOME and GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
-# Glade 3.38.1 force use python embed in 3.8 version. Let's try use 3.9.
-Patch0:		embed.patch
 
 BuildRequires:  meson
 BuildRequires:  cmake
