@@ -18,7 +18,7 @@ Url:		http://glade.gnome.org/
 Group:		Development/GNOME and GTK+
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
 #Upstream fix for compiling with meson 0.60+
-https://gitlab.gnome.org/GNOME/glade/-/merge_requests/117.patch
+Patch0:		https://gitlab.gnome.org/GNOME/glade/-/merge_requests/117.patch
 
 BuildRequires:  meson
 BuildRequires:  cmake
