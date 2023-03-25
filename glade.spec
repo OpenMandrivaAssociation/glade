@@ -12,7 +12,7 @@
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
 Version:	3.40.0
-Release:	2
+Release:	3
 License:	GPLv2+
 Url:		http://glade.gnome.org/
 Group:		Development/GNOME and GTK+
