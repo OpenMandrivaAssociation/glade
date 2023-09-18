@@ -12,11 +12,11 @@
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
 Version:	3.40.0
-Release:	4
+Release:	5
 License:	GPLv2+
-Url:		http://glade.gnome.org/
+Url:		https://glade.gnome.org/
 Group:		Development/GNOME and GTK+
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	https://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
 #Upstream fix for compiling with meson 0.60+
 #Patch0:		https://gitlab.gnome.org/GNOME/glade/-/merge_requests/117.patch
 
