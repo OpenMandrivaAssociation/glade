@@ -12,12 +12,13 @@
 Summary:	GTK+ / GNOME 3 widget builder
 Name:		glade
 Version:	3.40.0
-Release:	6
+Release:	7
 License:	GPLv2+
 Url:		https://glade.gnome.org/
 Group:		Development/GNOME and GTK+
 Source0:	https://ftp.gnome.org/pub/GNOME/sources/glade/%{url_ver}/%{name}-%{version}.tar.xz
-#Upstream fix for compiling with meson 0.60+
+# Port to webkitgtk 4.1
+Patch0:	port-to-webkit-4.1.patch
 #Patch0:		https://gitlab.gnome.org/GNOME/glade/-/merge_requests/117.patch
 
 BuildRequires:  meson
@@ -33,7 +34,7 @@ BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(pygobject-3.0)
-BuildRequires:  pkgconfig(webkit2gtk-4.0)
+BuildRequires:  pkgconfig(webkit2gtk-4.1)
 
 %description
 Glade is a RAD tool to enable quick & easy development of user interfaces
