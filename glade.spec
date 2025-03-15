@@ -35,6 +35,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:  pkgconfig(webkit2gtk-4.1)
+BuildRequires:	pkgconfig(harfbuzz-gobject)
 
 %description
 Glade is a RAD tool to enable quick & easy development of user interfaces
